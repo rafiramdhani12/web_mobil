@@ -1,10 +1,14 @@
-<?php 
+<?php
 $server = "localhost";
 $username = "root";
 $password = '';
 $database = "web_mobil";
-$db = mysqli_connect(hostname: $server , username :  $username , password: $password , database: $database);
-if (!$db){
-    die("gagal terhubung dengan database" . mysqli_connect_error());
+
+// Cek jika koneksi belum dibuat
+if (!isset($db)) {
+    $db = mysqli_connect($server, $username, $password, $database);
+    if (!$db) {
+        die("Gagal terhubung ke database: " . mysqli_connect_error());
+    }
 }
 ?>

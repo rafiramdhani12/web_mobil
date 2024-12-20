@@ -11,6 +11,9 @@ include "./components/header.html"
                 <input type="text" name="nama_mobil" placeholder="Masukan Nama client">
             </div>
             <div class="pb-4">
+                <input type="text" name="deskripsi" placeholder="Masukan Nama client">
+            </div>
+            <div class="pb-4">
                 <input type="text" name="harga_mobil" placeholder="Masukan nohp client">
             </div>
             <button class="rounded-pill text-white bg-primary" type="submit" name="submit">Submit</button>
