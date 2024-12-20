@@ -6,7 +6,7 @@
         $deskripsi = $_POST['deskripsi'];
         $harga_mobil = $_POST["harga_mobil"];
 
-        mysqli_query(mysql: $db, query: "INSERT INTO tb_mobil values('','$deskripsi','$nama_mobil','$harga_mobil')");
+        mysqli_query(mysql: $db, query: "INSERT INTO tb_mobil values('','$nama_mobil','$deskripsi','$harga_mobil')");
         header(header: "location:tambah.php");
     } else {
         header(header: "location:tambah.php");
