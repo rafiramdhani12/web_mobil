@@ -1,5 +1,5 @@
 <?php 
-require './koneksi.php';
+require './config/koneksi.php';
 $id = $_GET['id'];
 mysqli_query($db,"DELETE FROM tb_mobil WHERE id = '$id'");
 echo"<script>

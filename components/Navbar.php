@@ -1,4 +1,4 @@
-<?php require "./koneksi.php";
+<?php require "./config/koneksi.php";
 
 $query =  mysqli_query($db,"SELECT * FROM tb_mobil");
 
@@ -40,7 +40,7 @@ if(isset($_GET['query']) && $_GET['query'] !== ""){
 								<li><a class="dropdown-item" href="#">hubungi kami</a></li>
 								<li><a class="dropdown-item" href="#">Another action</a></li>
 								<li><hr class="dropdown-divider" /></li>
-								<li><a class="dropdown-item" href="tambah.php">dashboard admin</a></li>
+								<li><a class="dropdown-item" href="pages/tambah.php">dashboard admin</a></li>
 							</ul>
 						</li>
 					</ul>

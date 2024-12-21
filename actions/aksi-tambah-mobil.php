@@ -1,5 +1,5 @@
 <?php 
-    require "koneksi.php";
+    require "./config/koneksi.php";
 
     if(isset($_POST["submit"])){
         $nama_mobil = $_POST['nama_mobil'];

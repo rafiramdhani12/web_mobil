@@ -1,20 +1,12 @@
 <?php 
-include "./components/header.php";
-?>
-<?php 
-require "./koneksi.php";
-$id = $_GET['id'];
-$data = mysqli_query($db,"SELECT * FROM tb_mobil WHERE id = '$id'");
-$show = mysqli_fetch_assoc($data)
+include "../components/header.php"
 ?>
 
 <section>
     <div class="min-vh-100 d-flex align-items-center justify-content-center bg-light">
         <div class="p-4 border rounded-3 shadow-sm" style="max-width: 400px; width: 100%;">
-            <form action="aksi-edit.php" method="post" enctype="multipart/form-data">
-                <h3 class="text-center mb-4 text-secondary">update Data Mobil</h3>
-
-                <input type="hidden" name="id" value="<?= $show['id']; ?>">
+            <form action="./actions/aksi-tambah-mobil.php" method="post" enctype="multipart/form-data">
+                <h3 class="text-center mb-4 text-secondary">Tambah Data Mobil</h3>
 
                 <!-- Input Nama Mobil -->
                 <div class="mb-3">
@@ -23,7 +15,6 @@ $show = mysqli_fetch_assoc($data)
                         class="form-control" 
                         name="nama_mobil" 
                         placeholder="Nama Mobil" 
-                        value="<?= $show["nama_mobil"]?>"
                         required>
                 </div>
 
@@ -33,7 +24,6 @@ $show = mysqli_fetch_assoc($data)
                         class="form-control" 
                         name="deskripsi" 
                         placeholder="Deskripsi Mobil" 
-                        value="<?= $show["deskripsi"]?>"
                         rows="3" 
                         required></textarea>
                 </div>
@@ -44,12 +34,19 @@ $show = mysqli_fetch_assoc($data)
                         type="text" 
                         class="form-control" 
                         name="harga_mobil" 
-                        value="<?= $show["harga_mobil"]?>"
                         placeholder="Harga Mobil" 
                         required>
                 </div>
 
-               
+                <!-- Input Gambar -->
+                <div class="mb-3">
+                    <input 
+                        type="file" 
+                        class="form-control" 
+                        name="gambar" 
+                        accept="image/*" 
+                        required>
+                </div>
 
                 <!-- Tombol Submit -->
                 <button 
@@ -65,5 +62,5 @@ $show = mysqli_fetch_assoc($data)
 
 
 <?php 
-include "./components/footer.html"
+include "../components/footer.html"
 ?>

@@ -1,5 +1,5 @@
 <?php  
-require './koneksi.php';
+require './config/koneksi.php';
 $data_mobil = mysqli_query($db , "SELECT * FROM tb_mobil");
 ?>
 
@@ -17,7 +17,7 @@ $data_mobil = mysqli_query($db , "SELECT * FROM tb_mobil");
               <a href="#" class="btn btn-primary">Detail</a>
             </div>
             <div class="card-footer d-flex justify-content-end gap-2">
-              <a href="update.php?nama_mobil=<?= $mobil['id'];?>" class="btn btn-primary">update</a>
+              <a href="pages/update.php?nama_mobil=<?= $mobil['id'];?>" class="btn btn-primary">update</a>
               <a href="hapus-data.php?id=<?= $mobil["id"] ?>" class="btn btn-danger">delete</a>
             </div>
           </div>
